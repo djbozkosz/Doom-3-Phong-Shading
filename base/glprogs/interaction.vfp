@@ -108,7 +108,7 @@ TEMP	light, color, R1, R2, localNormal, specular, lightDir, viewDir, lightDirRef
 
 PARAM	subOne = { -1.0, -1.0, -1.0, -1.0 };
 PARAM	scaleTwo = { 2.0, 2.0, 2.0, 2.0 };
-PARAM	consts = { 16.0, 6.0, 0.0, 0.0 };
+PARAM	consts = { 8.0, 6.0, 0.0, 0.0 };
 
 # view dir normalized
 DP3		viewDir, fragment.texcoord[6], fragment.texcoord[6];
@@ -131,8 +131,8 @@ RSQ		R1, R1.x;
 MUL		localNormal, R1.x, localNormal;
 
 # reflect
-DP3 	lightDirRefl, lightDir, localNormal;
-MUL 	lightDirRefl, lightDirRefl, localNormal;
+DP3		lightDirRefl, lightDir, localNormal;
+MUL		lightDirRefl, lightDirRefl, localNormal;
 MAD		lightDirRefl, lightDirRefl, scaleTwo.x, -lightDir;
 
 # base light vectors
