@@ -6,7 +6,7 @@ Paste shader file `interaction.vfp` into: `Doom 3/base/glprogs`.
 
 ## Tweak reflection
 File `interaction.vfp` line `111`:
-* `PARAM	consts = { 16.0, 6.0, 0.0, 0.0 };`
+* `PARAM	consts = { 8.0, 6.0, 0.0, 0.0 };`
 * first value `specular power exponent`
 * second value `specular multiplier`
 
